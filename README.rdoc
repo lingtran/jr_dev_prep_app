@@ -21,6 +21,10 @@ Things you may want to cover:
 
 * Deployment instructions
 
+* Project management resources:
+  * [Marvel App - preliminary wireframe](https://marvelapp.com/16igc4d)
+  * [Waffle.io - Junior Dev Prep App Board](https://waffle.io/lingtran/jr_dev_prep_app)
+
 * ...
 
 
