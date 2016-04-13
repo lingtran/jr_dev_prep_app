@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
 
-  <!-- <link rel="stylesheet" href="/application.css"> -->
   <%= stylesheet_link_tag 'application' %>
-  <!-- <%= javascript_include_tag 'application' %> -->
+  <!-- <%= javascript_include_tag 'application' %> this won't work due to issue with turbolinks not being deleted upon creation of new rails app -->
   <%= csrf_meta_tags %>
   <title>Jr Dev Interview Prep</title>
 </head>
 <body>
 
-<div class="container">
-  <%= yield %>
+    <%= render '/layouts/navbar' %>
 
-</div>
+  <div class="container">
+
+    <%= yield %>
+
+  </div>
 
 </body>
 </html>
