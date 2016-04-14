@@ -5,12 +5,15 @@ RSpec.feature "User starts a prep session" do
     question = Question.create(title: "Who let the dogs out?", category: "Soft")
 
     visit root_path
-    # how to express test to press key Enter/Return...and then how to code this? Maybe implement with 'next' link first?
+
     within(".welcome_box") do
-      expect(page).to have_content "Landing page."
+      expect(page).to have_content "Hit me"
     end
-    find(".welcome_box").set("\n")
-    within(".question_box") do # test fails here likely due to line 12 not redirecting
+
+    click_link("Hit me")
+
+    assert_equal questions_path, current_path
+    within(".question_box") do
       expect(page).to have_content question.title
     end
   end
