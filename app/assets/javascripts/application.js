@@ -13,3 +13,23 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+var putTimeToScreen = function(timer){
+  $("#timer").html(timer)
+}
+
+var startTimer = function(){
+  var timer = 0;
+  window.setInterval(
+    function(){
+      timer += 1
+      putTimeToScreen(timer)
+    }, 1000)
+}
+
+$( document ).ready(
+  function() {
+    console.log( "ready!" );
+    startTimer();
+  }
+);
