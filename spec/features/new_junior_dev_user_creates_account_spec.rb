@@ -16,9 +16,9 @@ RSpec.feature "Junior dev user creates an account" do
 
     within(".registration") do
       fill_in("Name", with: "#{user.name}")
-      fill_in("Username", with: "#{user.username}")
-      fill_in("Email", with: "#{user.email}")
-      fill_in("Password", with: "#{user.password}")
+      fill_in("E-mail", with: "#{user.email}")
+      fill_in("Set a username", with: "#{user.username}")
+      fill_in("Set a password", with: "#{user.password}")
     end
     click_button("Create Login")
 

@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
 
   validates :name,
             :username,
-            :email,
             :password, presence: true
+
+  validates :email, presence: true, uniqueness: true
 end

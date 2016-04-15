@@ -1,0 +1,13 @@
+<h1>Create an account so you can track how your preparations are going! </h1>
+
+<div class="registration">
+  <ul>
+    <%= form_for(@user) do |f| %>
+      <li> <%= f.text_field :name, placeholder: "Name" %> </li>
+      <li> <%= f.text_field :email, placeholder: "E-mail" %> </li>
+      <li> <%= f.text_field :username, placeholder: "Set a username" %> </li>
+      <li> <%= f.text_field :password, placeholder: "Set a password" %> </li>
+      <li> <%= f.submit %> </li>
+    <% end %>
+  </ul>
+</div>
