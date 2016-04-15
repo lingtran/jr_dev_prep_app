@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature "Junior dev user creates an account" do
-  scenario "they are asked to log in after successful registration" do
+  scenario "they are asked to log in with valid params" do
     user = { name: "Felicity",
             email: "felicity@fake",
             username: "felicity",
