@@ -1,13 +1,30 @@
 require 'rails_helper'
 
-RSpec.describe UserController, type: controller do
+RSpec.describe UsersController, type: :controller do
   describe "GET #new" do
     it "assigns a new user as @user and renders the new user view" do
-      # create artist (use FactoryGirl?)
-      # get(:new) view
-      # expect(assigns(:user)).to be_a_new(User)
-      # expect(response).to render_template("new")
-    end
+      create(:user)
+      get(:new)
 
+      expect(assigns(:user)).to be_a_new(User)
+      expect(response).to render_template("new")
+    end
   end
+
+  # describe "POST #create" do
+  #   context "with valid params" do
+  #     it "creates a new artist" do
+  #       expect {
+  #         post :create, {:user => attributes_for(:user)}
+  #       }.to change(User, :count).by(1)
+  #     end
+  #
+  #     it "assigns a newly created user as @user" do
+  #       post :create, {:user => attributes_for(:user)}
+  #       expect(assigns(:user)).to be_a(User)
+  #       expect(assigns(:user)).to be_persisted
+  #       expect(response).to redirect_to(login_path)
+  #     end
+  #   end
+  # end
 end
