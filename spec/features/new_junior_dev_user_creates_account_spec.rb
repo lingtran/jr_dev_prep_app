@@ -1,21 +1,25 @@
 require 'rails_helper'
 
 RSpec.feature "Junior dev user creates an account" do
-  scenario "they can log in upon creation" do
+  scenario "they are asked to log in after successful registration" do
     user = { name: "Felicity",
             email: "felicity@fake",
             username: "felicity",
             password: "felicity"
           }
+    reg_success_msg = "Successfully registered! Go ahead and log in."
+    greeting = "Welcome!"
 
     visit root_path
 
     within ".welcome_box" do
-      expect(page).to have_content("Welcome!")
+      expect(page).to have_content greeting
+      expect(page).to have_link "Get Login", href: create_user_path
     end
 
     click_link("Get Login")
-    assert_equal create_user_path, current_path
+
+    # expect(response).to redirect_to(create_user_path) # move to Users controller test
 
     within(".menu_registration_container") do
       fill_in("Name", with: "#{user[:name]}")
@@ -24,6 +28,8 @@ RSpec.feature "Junior dev user creates an account" do
       fill_in("Set a password", with: "#{user[:password]}")
     end
     click_button("Create Login")
-    assert_equal login_path, current_path
+
+    # expect(response).to redirect_to(login_path) # move to Users controller test
+    expect(page).to have_content reg_success_msg
   end
 end
