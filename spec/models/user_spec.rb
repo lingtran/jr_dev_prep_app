@@ -10,6 +10,7 @@ RSpec.describe User, type: :model do
 
   context "associations" do
     it { should have_secure_password }
-    # add associations to questions and comments 
+    it { should have_many(:user_questions) }
+    it { should have_many(:questions).through(:user_questions) }
   end
 end
