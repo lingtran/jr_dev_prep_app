@@ -19,8 +19,6 @@ RSpec.feature "Junior dev user creates an account" do
 
     click_link("Get Login")
 
-    # expect(response).to redirect_to(create_user_path) # move to Users controller test
-
     within(".menu_registration_container") do
       fill_in("Name", with: "#{user[:name]}")
       fill_in("E-mail", with: "#{user[:email]}")
@@ -29,7 +27,7 @@ RSpec.feature "Junior dev user creates an account" do
     end
     click_button("Create Login")
 
-    # expect(response).to redirect_to(login_path) # move to Users controller test
     expect(page).to have_content reg_success_msg
+    expect(page).to have_button "Login"
   end
 end
