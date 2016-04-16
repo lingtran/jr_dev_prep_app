@@ -1,17 +1,15 @@
 <h1>Create an account so you can track how your preparations are going! </h1>
 
 <div class="menu_registration_container">
-  <ul>
     <%= form_for(@user) do |f| %>
-      <li> <%= f.text_field :name, placeholder: "Name" %> </li>
+      <%= f.text_field :name, placeholder: "Name" %> <br>
 
-      <li> <%= f.text_field :email, placeholder: "E-mail" %> </li>
+      <%= f.text_field :email, placeholder: "E-mail" %> <br>
 
-      <li> <%= f.text_field :username, placeholder: "Set a username" %> </li>
+      <%= f.text_field :username, placeholder: "Set a username" %> <br>
 
-      <li> <%= f.text_field :password, placeholder: "Set a password" %> </li>
+      <%= f.password_field :password, placeholder: "Set a password" %> <br>
 
-      <li> <%= f.submit "Create Login" %> </li>
+      <%= f.submit "Create Login" %> </li>
     <% end %>
-  </ul>
 </div>
