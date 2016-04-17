@@ -13,6 +13,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @comments = current_user.user_questions.where.not(comments: "")
+  end
+
   private
 
   def user_params

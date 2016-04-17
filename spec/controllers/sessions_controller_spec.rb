@@ -1,13 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe SessionsController, type: :controller do
-  context "login with valid params" do
+  xcontext "login with valid params" do
     # how to test sessions#new controller action?
-    xit "GET #new" do
+    it "GET #new" do
       create(:user)
-      get(session[:user])
+      get(:new)
 
-      expect(assigns(session[:user])).to be_a_new(Session)
+      expect(assigns(:user)).to be_a_new(session[:user_id])
+      expect(response).to render_template("new")
     end
   end
 end

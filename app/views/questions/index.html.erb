@@ -1,8 +1,24 @@
 <div class="question_box">
   <%= @question.title %>
-  <br>
+</div>
+
+<br>
+
+<div class="question_navigation">
   <%= link_to "Next Question", questions_path %>
 </div>
 
-<div id="timer">
+<div class="comments_box">
+  <%= form_for(@user_question, url: user_questions_path) do |f| %>
+    <%= f.label :comments, "Notes to self" %>
+    <%= f.text_area :comments %>
+    <%= f.hidden_field :question_id, :value => @question.id %>
+    <%= f.submit "Save" %>
+  <% end %>
 </div>
+
+<%= link_to "Enough prep for now", profile_path %>
+
+<!--
+<div id="timer">
+</div> -->

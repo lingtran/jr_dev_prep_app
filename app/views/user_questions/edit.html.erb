@@ -1,0 +1,6 @@
+<%= form_for(@user_question) do |f| %>
+  <%= f.label :comments, "Notes to self" %>
+  <%= f.text_area :comments %>
+  <%= f.hidden_field :question_id, :value => @user_question.question.id %>
+  <%= f.submit "Save" %>
+<% end %>

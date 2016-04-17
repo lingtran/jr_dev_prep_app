@@ -3,11 +3,12 @@
     <%= link_to "Hit me", questions_path %>
   </p>
 <br>
-  <table id="user_questions">
-    <tr>
-      <td> Questions </td>
-      <td> Comments </td>
-      <td> Comfort Level </td>
-    </tr>
-  </table>
+
+  <div class="user_questions">
+    <% @comments.each do |element| %>
+      <%= element.question.title %> <br>
+      <%= element.comments %><br>
+      <%= link_to "Edit Comment", edit_user_question_path(element) %>
+    <% end %>
+  </div>
 </div>
