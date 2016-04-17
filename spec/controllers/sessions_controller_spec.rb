@@ -11,4 +11,7 @@ RSpec.describe SessionsController, type: :controller do
       expect(response).to render_template("new")
     end
   end
+
+  xcontext "login with invalid params" do
+  end
 end
