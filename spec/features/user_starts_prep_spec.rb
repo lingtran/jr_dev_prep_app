@@ -7,8 +7,7 @@ RSpec.feature "User can start a session upon login" do
 
     visit root_path
 
-    within(".welcome_box") do
-      expect(page).to have_link "Get Login"
+    within(".nav_container") do
       expect(page).to have_link "Login"
     end
 
