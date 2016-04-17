@@ -9,12 +9,15 @@
 </div>
 
 <div class="comments_box">
-  <%= form_for(@user_question, url: user_question_profile_comment_path([current_user, @question]), method: :patch) do |f| %>
+  <%= form_for(@user_question, url: user_questions_path) do |f| %>
     <%= f.label :comments, "Notes to self" %>
     <%= f.text_area :comments %>
+    <%= f.hidden_field :question_id, :value => @question.id %>
     <%= f.submit "Save" %>
   <% end %>
 </div>
+
+<%= link_to "Enough prep for now", profile_path %>
 
 <!--
 <div id="timer">
