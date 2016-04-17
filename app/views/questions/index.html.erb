@@ -1,8 +1,21 @@
 <div class="question_box">
   <%= @question.title %>
-  <br>
+</div>
+
+<br>
+
+<div class="question_navigation">
   <%= link_to "Next Question", questions_path %>
 </div>
 
-<div id="timer">
+<div class="comments_box">
+  <%= form_for(@user_question, url: user_question_profile_comment_path([current_user, @question]), method: :patch) do |f| %>
+    <%= f.label :comments, "Notes to self" %>
+    <%= f.text_area :comments %>
+    <%= f.submit "Save" %>
+  <% end %>
 </div>
+
+<!--
+<div id="timer">
+</div> -->
