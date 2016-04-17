@@ -21,6 +21,8 @@ RSpec.feature "User can start a session upon login" do
 
     click_button("Login")
 
+    expect(page).to have_current_path(profile_path(user.id))
+
     within(".user_profile") do
       expect(page).to have_link("Hit me")
       expect(page).to have_content("Questions")
@@ -30,7 +32,7 @@ RSpec.feature "User can start a session upon login" do
 
     click_link("Hit me")
 
-    assert_equal questions_path, current_path
+    expect(page).to have_current_path(questions_path)
     within(".question_box") do
       expect(page).to have_content question.title
     end
