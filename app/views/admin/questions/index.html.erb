@@ -1,0 +1,17 @@
+<h1>Admin Questions</h1>
+
+<table class="admin_questions">
+  <tr>
+    <th id="questions">Questions</th>
+    <th id="category"> Comfort Level</th>
+  </tr>
+
+  <% @questions.each do |question| %>
+  <tr>
+    <td id="question_title"> <%= question.title %> </td>
+    <td id="question_category"> <%= question.category %> </td>
+  </tr>
+  <% end %>
+</table>
+
+</div>

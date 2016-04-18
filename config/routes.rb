@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   resources :questions, only: [:index]
 
+  namespace :admin do
+    resources :questions, only: [:index]
+  end
+
   resources :users, only: [:index, :create]
   get '/profile', to: "users#show"
 
