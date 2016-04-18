@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :questions, only: [:index]
 
   namespace :admin do
-    resources :questions, only: [:index, :edit, :update, :new, :create]
+    resources :questions, except: [:show]
   end
 
   resources :users, only: [:index, :create]

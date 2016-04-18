@@ -41,7 +41,7 @@ RSpec.feature "Admin logs in" do
       click_link("Edit")
     end
 
-    within(".question_box") do
+    within(".edit_question_box") do
       fill_in("Title", with: "#{new_question_title}")
       fill_in("Category", with: "#{new_question_category}")
       click_button("Save")

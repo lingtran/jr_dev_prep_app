@@ -5,7 +5,7 @@
   <table class="admin_questions">
     <tr>
       <th id="questions">Questions</th>
-      <th id="category"> Category</th>
+      <th id="category">Category</th>
       <th id="edit">Edit</th>
     </tr>
 
@@ -17,5 +17,11 @@
     </tr>
     <% end %>
   </table>
+</div>
 
+<div class="question_stats">
+  <ul>
+    <caption id="stats ">Question stats</caption>
+    <li>Total count: <%= @questions.count %></li>
+  </ul>
 </div>

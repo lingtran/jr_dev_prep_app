@@ -7,14 +7,16 @@
     <caption id="profile_cap">Notes to self</caption>
     <tr>
       <th id="questions">Questions</th>
+      <th id="categories">Categories</th>
       <th id="comments">Comments</th>
-      <th id="edit">Edit Comment</th>
+      <th id="edit">Edit</th>
       <th id="comfort_level"> Comfort Level</th>
     </tr>
 
     <% @comments.each do |element| %>
     <tr>
       <td id="questions"> <%= element.question.title %> </td>
+      <td id="categories"> <%= element.question.category %></td>
       <td id="comments"> <%= element.comments %> </td>
       <td id="edit"> <%= link_to "Edit", edit_user_question_path(element) %> </td>
       <td id="comfort_level"> Comfort Level</td>
