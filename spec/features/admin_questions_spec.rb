@@ -41,7 +41,7 @@ RSpec.feature "Admin logs in" do
       click_link("Edit")
     end
 
-    within(".edit_question_box") do
+    within(".question_box") do
       fill_in("Title", with: "#{new_question_title}")
       fill_in("Category", with: "#{new_question_category}")
       click_button("Save")
@@ -51,6 +51,35 @@ RSpec.feature "Admin logs in" do
     within(".admin_questions") do
       expect(page).to have_content("#{new_question_title}")
       expect(page).to have_content("#{new_question_category}")
+    end
+  end
+
+  scenario "they can create a question" do
+    login_admin
+    gen_question
+    new_question = {  title: "new q",
+                      category: "new cat"
+      }
+
+    controller = ApplicationController.new
+    allow(controller).to receive(:current_user).and_return(@admin)
+
+    visit admin_questions_path
+
+    expect(page).to have_link("Create a question"), href: new_admin_question_path
+
+    click_link("Create a question")
+
+    within(".question_box") do
+      fill_in("Title", with: "#{new_question[:title]}")
+      fill_in("Category", with: "#{new_question[:category]}")
+      click_button("Save")
+    end
+
+    expect(page).to have_current_path(admin_questions_path)
+    within(".admin_questions") do
+      expect(page).to have_content("#{new_question[:title]}")
+      expect(page).to have_content("#{new_question[:category]}")
     end
   end
 

@@ -122,6 +122,13 @@ td{
   text-align:left;
 }
 
+#create_question{
+  text-align: left;
+}
+
+textarea{
+  width: 70%;
+}
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

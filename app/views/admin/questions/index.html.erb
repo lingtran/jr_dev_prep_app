@@ -1,19 +1,21 @@
 <h1>Admin Questions</h1>
+<div class="admin_profile">
+  <p id="create_question"> <%= link_to "Create a question", new_admin_question_path, class: "btn btn-default" %> </p>
 
-<table class="admin_questions">
-  <tr>
-    <th id="questions">Questions</th>
-    <th id="category"> Category</th>
-    <th id="edit">Edit</th>
-  </tr>
+  <table class="admin_questions">
+    <tr>
+      <th id="questions">Questions</th>
+      <th id="category"> Category</th>
+      <th id="edit">Edit</th>
+    </tr>
 
-  <% @questions.each do |question| %>
-  <tr>
-    <td id="question_title"> <%= question.title %> </td>
-    <td id="question_category"> <%= question.category %> </td>
-    <td id="edit"> <%= link_to "Edit", edit_admin_question_path(question) %> </td>
-  </tr>
-  <% end %>
-</table>
+    <% @questions.each do |question| %>
+    <tr>
+      <td id="question_title"> <%= question.title %> </td>
+      <td id="question_category"> <%= question.category %> </td>
+      <td id="edit"> <%= link_to "Edit", edit_admin_question_path(question) %> </td>
+    </tr>
+    <% end %>
+  </table>
 
 </div>
