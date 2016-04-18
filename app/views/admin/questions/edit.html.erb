@@ -1,0 +1,7 @@
+<p>
+  Editing question: <%= @question.title %>
+</p>
+
+<div class="edit_question_box">
+  <%= render partial: "form", locals: { url: admin_question_path } %>
+</div>

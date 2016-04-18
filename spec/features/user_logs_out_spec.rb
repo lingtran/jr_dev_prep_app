@@ -5,7 +5,7 @@ RSpec.feature "User can logout" do
     login_user
 
     within(".nav_container") do
-      expect(page).to have_link("Logout")
+      expect(page).to have_link("Logout"), href: logout_path
     end
 
     click_link("Logout")

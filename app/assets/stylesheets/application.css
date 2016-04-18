@@ -59,15 +59,19 @@ td{
   font-size: 12px
 }
 #questions{
-  width: 35%
+  width: 30%
+}
+
+#categories{
+  width: 10%
 }
 
 #comments{
-  width: 35%
+  width: 30%
 }
 
 #edit{
-  width: 15%
+  width: 10%
 }
 
 #comfort_level{
@@ -115,6 +119,29 @@ td{
 #stop{
   text-decoration: none
 }
+
+/*admin-question*/
+.edit_question_box{
+  font-weight: lighter;
+  text-align:left;
+}
+
+#create_question{
+  text-align: left;
+}
+
+textarea{
+  width: 70%;
+}
+
+.question_stats{
+  border: 2px dotted rgba(0,128,12,0.3);
+  width: 15%;
+  font-size: 12px;
+  font-weight: lighter;
+  text-align: left
+}
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

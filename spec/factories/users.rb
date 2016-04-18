@@ -7,6 +7,14 @@ FactoryGirl.define do
     password "password"
   end
 
+  factory :admin, parent: :user do
+    sequence(:name)
+    sequence(:email)
+    username "admin"
+    role 1
+    password "admin"
+  end
+
   sequence :name do |n|
     "#{n} user"
   end
