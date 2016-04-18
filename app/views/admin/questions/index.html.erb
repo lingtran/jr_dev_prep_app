@@ -4,12 +4,14 @@
   <tr>
     <th id="questions">Questions</th>
     <th id="category"> Category</th>
+    <th id="edit">Edit</th>
   </tr>
 
   <% @questions.each do |question| %>
   <tr>
     <td id="question_title"> <%= question.title %> </td>
     <td id="question_category"> <%= question.category %> </td>
+    <td id="edit"> <%= link_to "Edit", edit_admin_question_path(question) %> </td>
   </tr>
   <% end %>
 </table>
