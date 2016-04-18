@@ -8,4 +8,12 @@ class Question < ActiveRecord::Base
   def self.random
     all.sample
   end
+
+  def self.count
+    all.count
+  end
+
+  def self.unique_categories
+    select(:category).uniq.count
+  end
 end

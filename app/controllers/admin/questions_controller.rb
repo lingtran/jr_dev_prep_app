@@ -1,6 +1,8 @@
 class Admin::QuestionsController < ApplicationController
   def index
     @questions = Question.all
+    @count = Question.count
+    @categories = Question.unique_categories
   end
 
   def new
