@@ -1,11 +1,9 @@
 <div class="menu_login_container">
+  <h3>I'm pumped to steer my destiny!</h3>
   <%= form_for(:session, url: login_path) do |f| %>
 
-    <%= f.label :username %>
-    <%= f.text_field :username %> <br>
-
-    <%= f.label :password %>
-    <%= f.password_field :password %> <br>
+    <%= f.text_field :username, placeholder:"Username" %> <br>
+    <%= f.password_field :password, placeholder: "Password" %> <br>
 
     <%= f.submit "Login" %>
   <% end %>
