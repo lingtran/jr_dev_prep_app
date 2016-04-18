@@ -1,34 +1,120 @@
 /*throughout app*/
 body {
   background-color: rgba(0,128,12,0.1);
-  border: 5px solid green;
-  margin-top: 2%;
+  font-family: sans-serif;
+  font-size: 15px;
 }
 
 .container {
-  border: 5px dotted rgba(0,128,12,0.3);
-  text-align: center;
-  font-size: 30px;
+  font-size: 20px;
   margin-left: 5%;
   margin-right: 5%;
-  margin-top: 15%;
+  margin-top: 5%;
   margin-bottom: 20%;
   font-family: sans-serif;
-  font-size: 25px;
+  font-size: 15px;
 }
 
 /*navbar*/
-.nav-container {
-  background-color: purple
+.btn-default{
+  font-family: sans-serif;;
+  font-size: 13px;
+  text-decoration: none;
+  background-color: green;
+  color: white
+}
+
+/*registration*/
+.menu_registration_container{
+  text-align: center;
+}
+
+/*login*/
+.menu_login_container{
+  text-align: center;
+  font-size: 15px
 }
 
 /*index*/
 .welcome_box {
+  font-size: 20px;
+  text-align: center
+}
 
+/*profile*/
+#start{
+  text-align:left
+}
+
+.user_questions{
+  width: 90%
+}
+
+th {
+  text-align: left;
+  font-weight: lighter;
+}
+
+td{
+  font-size: 12px
+}
+#questions{
+  width: 35%
+}
+
+#comments{
+  width: 35%
+}
+
+#edit{
+  width: 15%
+}
+
+#comfort_level{
+  width: 20%
+}
+
+#profile_cap{
+  font-weight: bolder
 }
 
 /*question*/
+.question_box{
+  border: 5px dotted rgba(0,128,12,0.3);
+  text-align: center;
+  font-size: 30px;
+}
 
+.question_navigation{
+  text-align: center;
+}
+
+.next_question{
+  text-decoration:none;
+}
+
+.comments_box{
+  font-weight: lighter;
+  text-align:center;
+}
+
+.edit_comment_box{
+  font-weight: lighter;
+  text-align:left;
+}
+
+.comment_text{
+  width: 60%;
+  height: 40%
+}
+
+.stop_session{
+  text-align: right;
+}
+
+#stop{
+  text-decoration: none
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

@@ -1,14 +1,25 @@
-<div class="user_profile">
-  <p>
-    <%= link_to "Hit me", questions_path %>
-  </p>
-<br>
+<h2>Profile</h2>
 
-  <div class="user_questions">
+<div class="user_profile">
+  <p id="start"> <%= link_to "Hit me to start a prep session", questions_path, class: "btn btn-default" %> </p>
+
+  <table class="user_questions">
+    <caption id="profile_cap">Notes to self</caption>
+    <tr>
+      <th id="questions">Questions</th>
+      <th id="comments">Comments</th>
+      <th id="edit">Edit Comment</th>
+      <th id="comfort_level"> Comfort Level</th>
+    </tr>
+
     <% @comments.each do |element| %>
-      <%= element.question.title %> <br>
-      <%= element.comments %><br>
-      <%= link_to "Edit Comment", edit_user_question_path(element) %>
+    <tr>
+      <td id="questions"> <%= element.question.title %> </td>
+      <td id="comments"> <%= element.comments %> </td>
+      <td id="edit"> <%= link_to "Edit", edit_user_question_path(element) %> </td>
+      <td id="comfort_level"> Comfort Level</td>
+    </tr>
     <% end %>
-  </div>
+  </table>
+
 </div>

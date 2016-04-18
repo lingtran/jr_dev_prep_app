@@ -9,21 +9,20 @@ RSpec.feature "User can start a session upon login" do
 
     within(".nav_container") do
       expect(page).to have_link "Login"
+      click_link("Login")
     end
-
-    click_link("Login")
 
     within(".menu_login_container") do
       fill_in("Username", with: user.username)
       fill_in("Password", with: user.password)
+      click_button("Login")
     end
 
-    click_button("Login")
 
     expect(page).to have_current_path(profile_path(user.id))
 
     within(".user_profile") do
-      expect(page).to have_link("Hit me")
+      expect(page).to have_link("Hit me to start a prep session")
       expect(page).to have_content("Questions")
       expect(page).to have_content("Comments")
       expect(page).to have_content("Comfort Level")
