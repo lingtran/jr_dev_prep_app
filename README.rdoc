@@ -26,7 +26,7 @@ Things you may want to cover:
   * Waffle.io - Junior Dev Prep App Board: <https://waffle.io/lingtran/jr_dev_prep_app>
 
 * Heroku app link:
-  * <https://pure-caverns-64530.herokuapp.com/>
+  * <http://jrdevinterview.herokuapp.com/>
 * ...
 
 
