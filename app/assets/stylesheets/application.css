@@ -1,146 +1,3 @@
-/*throughout app*/
-body {
-  background-color: rgba(0,128,12,0.1);
-  font-family: sans-serif;
-  font-size: 15px;
-}
-
-.container {
-  font-size: 20px;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 5%;
-  margin-bottom: 20%;
-  font-family: sans-serif;
-  font-size: 15px;
-}
-
-/*navbar*/
-.btn-default{
-  font-family: sans-serif;;
-  font-size: 13px;
-  text-decoration: none;
-  background-color: green;
-  color: white
-}
-
-/*registration*/
-.menu_registration_container{
-  text-align: center;
-}
-
-/*login*/
-.menu_login_container{
-  text-align: center;
-  font-size: 15px
-}
-
-/*index*/
-.welcome_box {
-  font-size: 20px;
-  text-align: center
-}
-
-/*profile*/
-#start{
-  text-align:left
-}
-
-.user_questions{
-  width: 90%
-}
-
-th {
-  text-align: left;
-  font-weight: lighter;
-}
-
-td{
-  font-size: 12px
-}
-#questions{
-  width: 30%
-}
-
-#categories{
-  width: 10%
-}
-
-#comments{
-  width: 30%
-}
-
-#edit{
-  width: 10%
-}
-
-#comfort_level{
-  width: 20%
-}
-
-#profile_cap{
-  font-weight: bolder
-}
-
-/*question*/
-.question_box{
-  border: 5px dotted rgba(0,128,12,0.3);
-  text-align: center;
-  font-size: 30px;
-}
-
-.question_navigation{
-  text-align: center;
-}
-
-.next_question{
-  text-decoration:none;
-}
-
-.comments_box{
-  font-weight: lighter;
-  text-align:center;
-}
-
-.edit_comment_box{
-  font-weight: lighter;
-  text-align:left;
-}
-
-.comment_text{
-  width: 60%;
-  height: 40%
-}
-
-.stop_session{
-  text-align: right;
-}
-
-#stop{
-  text-decoration: none
-}
-
-/*admin-question*/
-.edit_question_box{
-  font-weight: lighter;
-  text-align:left;
-}
-
-#create_question{
-  text-align: left;
-}
-
-textarea{
-  width: 70%;
-}
-
-.question_stats{
-  border: 2px dotted rgba(0,128,12,0.3);
-  width: 15%;
-  font-size: 12px;
-  font-weight: lighter;
-  text-align: left
-}
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -157,3 +14,160 @@ textarea{
  *= require_tree .
  *= require_self
  */
+
+ /*throughout app*/
+ body {
+   background-color: #CFD8DC;
+   color: #607D8B;
+ }
+
+ .container {
+   font-size: 20px;
+   padding: 5%;
+   margin-bottom: 5%;
+   font-family: sans-serif;
+   font-size: 15px;
+ }
+
+ /*navbar*/
+ .navigation{
+   font-family: sans-serif;;
+   font-size: 13px;
+   text-decoration: none;
+   background-color: #009688;
+   color: white;
+   padding: 1%;
+ }
+
+ #nav-link{
+   padding: 0.5%;
+ }
+
+ /*registration*/
+ .menu_registration_container{
+   text-align: center;
+ }
+
+ /*login*/
+ .menu_login_container{
+   text-align: center;
+   font-size: 15px
+ }
+
+ /*index*/
+ .welcome_box {
+   font-size: 20px;
+   text-align: center
+ }
+
+ /*profile*/
+ #start{
+   text-align:left;
+   text-decoration: none;
+ }
+
+ .user_questions{
+   width: 90%
+ }
+
+ th {
+   text-align: left;
+   font-weight: lighter;
+ }
+
+ td{
+   font-size: 12px
+ }
+ #questions{
+   width: 30%
+ }
+
+ #categories{
+   width: 10%
+ }
+
+ #comments{
+   width: 30%
+ }
+
+ #edit{
+   width: 10%
+ }
+
+ #comfort_level{
+   width: 20%
+ }
+
+ #profile_cap{
+   font-weight: bolder
+ }
+
+ /*question*/
+ .question_box{
+   border: 5px dotted rgba(0,128,12,0.3);
+   text-align: center;
+   font-size: 30px;
+ }
+
+ .question_navigation{
+   text-align: center;
+ }
+
+ .next_question{
+   text-decoration:none;
+ }
+
+ .comments_box{
+   font-weight: lighter;
+   text-align:center;
+ }
+
+ .edit_comment_box{
+   font-weight: lighter;
+   text-align:left;
+ }
+
+ .comment_text{
+   width: 60%;
+   height: 40%
+ }
+
+ .stop_session{
+   text-align: right;
+ }
+
+ #stop{
+   text-decoration: none
+ }
+
+ /*admin-question*/
+ .edit_question_box{
+   font-weight: lighter;
+   text-align:left;
+ }
+
+ #create_question{
+   text-align: left;
+ }
+
+ textarea{
+   width: 70%;
+ }
+
+ .question_stats{
+   border: 2px dotted rgba(0,128,12,0.3);
+   width: 15%;
+   font-size: 12px;
+   font-weight: lighter;
+   text-align: left
+ }
+
+ /*footer*/
+ .mdl-mega-footer{
+   font-family: sans-serif;;
+   font-size: 13px;
+   padding: 5%;
+   text-decoration: none;
+   background-color: #009688;
+   color: white;
+ }

@@ -20,6 +20,15 @@
 //
 // var startTimer = function(){
 //   var timer = 0;
+     var doSomethingElse = function() {
+
+     };
+
+     var doSomething = function() {
+       doSomethingElse()
+     }
+
+     window.setInterval(doSomething, 1000)
 //   window.setInterval(
 //     function(){
 //       timer += 1
